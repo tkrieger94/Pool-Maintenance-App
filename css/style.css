@@ -1,0 +1,166 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Sections */
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+section h2, section h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Forms */
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="date"],
+form textarea {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* So padding doesn't add to width */
+}
+
+form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+button[type="button"] {
+    background-color: #f0ad4e;
+}
+button[type="button"]:hover {
+    background-color: #ec971f;
+}
+
+/* Links */
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error and Success Messages */
+.error {
+    color: red;
+    background-color: #fdd;
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.success {
+    color: green;
+    background-color: #dfd;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Pool List and Chemical Log List Items (Basic) */
+.pool-item, .chemical-log-item {
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.pool-item h4, .chemical-log-item h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.pool-item p, .chemical-log-item p {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+}
+
+.actions button {
+    font-size: 0.8em;
+    padding: 5px 8px;
+    margin-right: 5px;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
