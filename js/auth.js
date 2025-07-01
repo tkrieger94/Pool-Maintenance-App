@@ -98,6 +98,19 @@ const auth = {
         const errorMessageEl = document.getElementById('error-message');
         auth.clearMessages(errorMessageEl);
 
+        // --- DEVELOPMENT ONLY BYPASS ---
+        // IMPORTANT: Remove this block before any deployment or sharing!
+        // This bypass only works if Supabase URL is still the placeholder.
+        if (typeof SUPABASE_URL !== 'undefined' && SUPABASE_URL === 'YOUR_SUPABASE_URL') {
+            if (email === 'a' && password === 'b') {
+                console.warn('!!! Using placeholder login bypass !!!');
+                auth.user = { id: 'local-bypass-user', email: 'a (bypass)' };
+                window.location.href = 'dashboard.html';
+                return; // Prevent Supabase call
+            }
+        }
+        // --- END DEVELOPMENT ONLY BYPASS ---
+
         try {
             const { data, error } = await sb.auth.signInWithPassword({
                 email: email,
